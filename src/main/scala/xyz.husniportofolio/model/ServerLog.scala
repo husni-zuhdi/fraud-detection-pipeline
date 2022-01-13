@@ -1,4 +1,4 @@
-package xyz.husni-portofolio.model
+package xyz.husniportofolio.model
 
 case class ServerLog(
                     eventId: String,

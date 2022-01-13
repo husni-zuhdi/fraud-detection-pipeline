@@ -1,4 +1,4 @@
-package xyz.husni-portofolio
+package xyz.husniportofolio
 
 import java.time.Instant
 import java.util.Properties
@@ -6,7 +6,7 @@ import java.util.UUID.randomUUID
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 import scala.util.Random
 
-import xyz.husni-portofolio.model.ServerLog
+import xyz.husniportofolio.model.ServerLog
 
 object ServerLogGenerator {
   private val random = new Random

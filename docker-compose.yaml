@@ -49,7 +49,7 @@ services:
     build: ./
     image: sde:1-FLINK-1.11-scala_2.11
     # Anticipate error cause by different folder structure
-    command: "java -classpath /opt/fraud-detection.jar:/opt/flink/lib/* xyz.husni-portofolio.ServerLogGenerator"
+    command: "java -classpath /opt/fraud-detection.jar:/opt/flink/lib/* xyz.husniportofolio.ServerLogGenerator"
     depends_on:
       - kafka
   frauddetection:
