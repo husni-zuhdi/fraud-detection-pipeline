@@ -5,18 +5,18 @@ if (!(docker info) 2>&1>$null) {
 }
 
 # Spin up docker compose
-docker compose up -d
+docker-compose up -d
 docker ps
 
 # Manual Checking
 # used to check the first 10 messages in the server-logs  topic
-docker exec -t "$($(Split-Path -Path $pwd -Leaf).ToLower())-kafka-1" kafka-console-consumer.sh `
+docker exec -t "$($(Split-Path -Path $pwd -Leaf).ToLower())_kafka_1" kafka-console-consumer.sh `
 --bootstrap-server :9092 `
 --topic server-logs `
 --from-beginning `
 --max-messages 10
 # used to check the first 10 messages in the alerts topic
-docker exec -t "$($(Split-Path -Path $pwd -Leaf).ToLower())-kafka-1" kafka-console-consumer.sh `
+docker exec -t "$($(Split-Path -Path $pwd -Leaf).ToLower())_kafka_1" kafka-console-consumer.sh `
 --bootstrap-server :9092 `
 --topic alerts `
 --from-beginning `

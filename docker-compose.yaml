@@ -14,7 +14,7 @@ services:
   taskmanager:
     image: flink:1.11.0-scala_2.11
     depends_on:
-      -jobmanager
+      - jobmanager
     command: "taskmanager.sh start-foreground"
     volumes:
       - ./conf:/opt/flink/conf
